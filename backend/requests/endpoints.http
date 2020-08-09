@@ -1,0 +1,54 @@
+#install RESR CLIENT Extension
+
+
+#### Get list of users
+
+GET http://localhost:4000/users HTTP/1.1
+
+#### Create a new user
+
+Post http://localhost:4000/users/add HTTP/1.1
+Content-Type: application/json
+
+{
+    "userName":"hello"
+}
+
+#### List of all exercises
+
+Get http://localhost:4000/exercises HTTP/1.1
+
+#### Create a new exercise
+
+Post http://localhost:4000/exercises/add HTTP/1.1
+Content-Type: application/json
+
+{
+    "userName":"srinivan",
+    "description":"bike riding",
+    "duration":40,
+    "date":"2020-08-09T10:59:56.188Z"
+
+}
+
+#### Get a exercise
+
+Get http://localhost:4000/exercises/exercise/5f2fdfe0149956ca20ddc2ae HTTP/1.1
+
+#### Delete a exercise
+
+Delete http://localhost:4000/exercises/exercise/5f2fdfc8149956ca20ddc2ac HTTP/1.1
+
+#### Update a exercise
+
+
+Put http://localhost:4000/exercises/exercise/5f2fdfd6149956ca20ddc2ad HTTP/1.1
+Content-Type: application/json
+
+{
+    "userName":"srini",
+    "description":"bike riding",
+    "duration":40,
+    "date":"2020-08-09T10:59:56.188Z"
+
+}
