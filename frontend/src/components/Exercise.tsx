@@ -3,7 +3,6 @@ import { RouteComponentProps } from "react-router";
 import { Exercise } from "../axios/apis";
 import moment from "moment";
 import Styles from "./styles.module.css";
-
 interface MatchParams {
   id: string;
 }
@@ -17,9 +16,11 @@ const ExerciseComp: React.FC<ComponentProps> = (props: ComponentProps) => {
   const { userName, description, duration, date, _id } = props.exercise;
   return (
     <div className="col-sm-12 col-md-4 mb-4">
-      <div className="card h-100 mt-5">
+      <div className="card h-100 mt-5 ">
         <div className="card-body">
-          <h5 className="card-title text-center">{description}</h5>
+          <h5 className={`card-title text-center ${Styles.cardWrap}`}>
+            {description}
+          </h5>
           <p className="card-text text-center">
             Duration:{" "}
             <span className="badge badge-pill badge-success">

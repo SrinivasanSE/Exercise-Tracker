@@ -3,7 +3,7 @@ import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as Yup from "yup";
 import { createUser, UserData } from "../axios/apis";
 import { RouteComponentProps } from "react-router";
-
+import Styles from "./styles.module.css";
 interface MatchParams {
   id: string;
 }
@@ -30,14 +30,7 @@ const CreateUser: React.FC<ComponentProps> = (props: ComponentProps) => {
     <div className="container mt-5">
       <div className="row mb-5">
         <div className="col-12 offset-0 col-md-6 offset-md-3  text-center">
-          <h1 className="mt-5">User Form</h1>
-          <div
-            style={{
-              borderBottom: "2px solid green",
-              margin: "0px auto",
-              width: "50%",
-            }}
-          ></div>
+          <h1 className={`mt-5 ${Styles.border}`}>User Form</h1>
         </div>
       </div>
       <div className="row">

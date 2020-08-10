@@ -4,24 +4,34 @@
 
 .border {
   border-bottom: 2px solid green;
-  margin: 0px auto;
-  width: 50%;
+  display: inline-block;
+  width: auto;
+  text-align: center;
+  margin: auto;
+  padding: 0 20px 5px;
+  white-space: nowrap;
+  overflow: hidden;
 }
-
+.cardWrap {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
 @media screen and (max-width: 500px) {
   .border {
     border-bottom: 2px solid green;
-    margin: 0px auto;
-    width: 90%;
+    display: inline-block;
+    width: auto;
+    margin: auto;
+    padding: 0 20px 5px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
 }
 
-.button {
-  margin-left: 57%;
-}
-
-@media screen and (max-width: 900px) {
-  .button {
-    margin-left: 49%;
-  }
+.cardWrap:hover {
+  overflow: visible;
+  white-space: normal;
+  height: auto;
 }
