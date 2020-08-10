@@ -1,0 +1,27 @@
+.active {
+  border-bottom: 1px solid red;
+}
+
+.border {
+  border-bottom: 2px solid green;
+  margin: 0px auto;
+  width: 50%;
+}
+
+@media screen and (max-width: 500px) {
+  .border {
+    border-bottom: 2px solid green;
+    margin: 0px auto;
+    width: 90%;
+  }
+}
+
+.button {
+  margin-left: 57%;
+}
+
+@media screen and (max-width: 900px) {
+  .button {
+    margin-left: 49%;
+  }
+}

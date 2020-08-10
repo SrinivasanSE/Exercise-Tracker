@@ -23,15 +23,13 @@ router.post("/add", (req, res) => {
     .catch((err) => res.status(400).json({ msg: "error occured", err }));
 });
 
-router.get("/exercise/:id", (req, res) => {
+router.get("/:id", (req, res) => {
   Exercise.find({ _id: req.params.id })
-    .then((exercise) =>
-      res.status(200).json({ msg: "Exercise found", exercise })
-    )
+    .then((exercise) => res.status(200).json(exercise))
     .catch((err) => res.status(400).json({ msg: "Exercise not found", err }));
 });
 
-router.put("/exercise/:id", (req, res) => {
+router.put("/edit/:id", (req, res) => {
   Exercise.updateOne(
     { _id: req.params.id },
     {
@@ -39,6 +37,7 @@ router.put("/exercise/:id", (req, res) => {
         userName: req.body.userName,
         description: req.body.description,
         duration: req.body.duration,
+        date: req.body.date,
       },
     }
   )
@@ -46,7 +45,7 @@ router.put("/exercise/:id", (req, res) => {
     .catch((err) => res.status(400).json({ msg: "Exercise not found", err }));
 });
 
-router.delete("/exercise/:id", (req, res) => {
+router.delete("/delete/:id", (req, res) => {
   Exercise.findByIdAndDelete(req.params.id)
     .then(() => res.status(200).json({ msg: "Exercise deleted" }))
     .catch((err) => res.status(400).json({ msg: "Exercise not found", err }));
