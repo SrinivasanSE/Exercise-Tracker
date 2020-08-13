@@ -2,6 +2,13 @@
 
 # MERN APP
 
+#### This App was built using this Tutorial [FreeCodeCamp](https://www.youtube.com/watch?v=7CqJlxBYj-M)
+
+#### Thanks to the Creator for helping many developers like me to become a good MERN STACK developer.
+
+#### Project Github Link [beaucarnes](https://github.com/beaucarnes/mern-exercise-tracker-mongodb)
+
+#### ***Note:***  This project was fully made by me from scratch and above project was just used as a reference.
 
 ## Stack
 
@@ -52,3 +59,9 @@
 - [ ] Add more Features 
 - [ ] Use Redux Form
 - [ ] Configure to run both frontend and backend server using single command
+
+
+#### VSCode Extensions used
+
+1) Prettify-To prettify your code
+2) REST Client- To make a request to the API in VSCode itself(Similar to PostMan).
